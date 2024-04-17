@@ -1,0 +1,21 @@
+import sqlite3
+import requests
+import os 
+
+conn = sqlite3.connect('3wk_project.db')
+
+data = conn.cursor()
+
+data.execute('''CREATE TABLE IF NOT EXISTS stock
+             (data text, trans text, symbol text, qty real, price real)''')
+
+data.execute("insert into stock values('2024-04-12','BUY','VIX',100,167.78)")
+
+conn.execute
+
+data.execute('SELECT * FROM stock')
+
+for row in data.fetchall():
+    print(row)
+
+conn.close()
