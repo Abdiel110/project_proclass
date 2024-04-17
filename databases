@@ -1,0 +1,8 @@
+# databases
+
+import sqlite3
+import requests
+import os
+
+db_conn = sqlite3.connect("ap's floder.db")
+db_cursor = db_conn.cursor()
